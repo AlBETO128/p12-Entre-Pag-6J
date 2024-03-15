@@ -1,5 +1,3 @@
-//Pantalla1_0449
-
 import 'package:flutter/material.dart';
 
 class Pantalla2_0449 extends StatelessWidget {
@@ -7,26 +5,21 @@ class Pantalla2_0449 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final argumento = ModalRoute.of(context)!.settings.arguments as String;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
-        title: Text('Pantalla2 Carbajal_0449'),
+        title: const Text('Pantalla2 Carbajal'),
       ),
       body: Center(
-        child: Container(
-          color: Color(0xbfa7fdff),
-          constraints: BoxConstraints(
-            minHeight: 100,
-            minWidth: 200,
-            maxHeight: 300,
-            maxWidth: 300,
-          ),
-          child: Text(
-            'Alberto C.-0449',
-            style: TextStyle(fontSize: 30),
-          ),
-        ),
-      ),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Text(argumento),
+        ElevatedButton(
+            child: const Text("Alberto Carbajal"),
+            onPressed: () {
+              Navigator.pop(context);
+            }),
+      ] //fin mainAxisAlignment
+              )),
     );
-  } //fin widget
-} //fin Pantalla1_0449
+  }
+}

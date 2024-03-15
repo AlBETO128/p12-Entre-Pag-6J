@@ -9,23 +9,16 @@ class Pantalla1_0449 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
-        title: Text('Pantalla1 Carbajal_0449'),
+        title: const Text('Pantalla1 Alberto Carbajal'),
       ),
       body: Center(
-        child: Container(
-          color: Color(0xffffeebc),
-          width: 300,
-          height: 300,
-          padding: EdgeInsets.all(32),
-          margin: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
-          alignment: Alignment.center,
-          child: Text(
-            'Alberto C.-0449',
-            style: TextStyle(fontSize: 30),
-          ),
-        ),
-      ),
+          child: ElevatedButton(
+        child: const Text("Ir a Pantalla2 Alberto Carbajal"),
+        onPressed: () {
+          Navigator.pushNamed(context, "/Pantalla2_0449",
+              arguments: "Pantalla 2 Carbajal");
+        }, //fin presionar boton
+      )),
     );
-  } //fin widget
-} //fin Pantalla1_0449
+  } //fin widwet
+} //fin Clase Pantalla1
